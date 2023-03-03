@@ -1,11 +1,11 @@
 package notion
 
 import (
-	"NotionRest/notion/item"
 	"encoding/json"
 	"fmt"
 	"io"
 	"net/http"
+	"notion/item"
 )
 
 type List struct {

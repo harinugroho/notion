@@ -1,8 +1,8 @@
 package item
 
 import (
-	"NotionRest/notion/subitem"
 	"errors"
+	"notion/subitem"
 	"time"
 )
 
