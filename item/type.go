@@ -2,7 +2,7 @@ package item
 
 import (
 	"encoding/json"
-	"notion/subitem"
+	"github.com/harinugroho/notion/subitem"
 	"strconv"
 )
 

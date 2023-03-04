@@ -2,7 +2,7 @@ package item
 
 import (
 	"errors"
-	"notion/subitem"
+	"github.com/harinugroho/notion/subitem"
 	"time"
 )
 
