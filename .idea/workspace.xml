@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00ab9a27-1868-4a41-9d0d-57e100cebbfd" name="Changes" comment="change package name">
+      <change afterPath="$PROJECT_DIR$/database_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/list_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/item/object.go" beforeDir="false" afterPath="$PROJECT_DIR$/item/object.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/item/type.go" beforeDir="false" afterPath="$PROJECT_DIR$/item/type.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/list.go" beforeDir="false" afterPath="$PROJECT_DIR$/list.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +21,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Go File" />
+        <option value="Go Application" />
       </list>
     </option>
   </component>
@@ -35,7 +40,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go Application&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
@@ -49,8 +54,35 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;
   }
 }</component>
-  <component name="RunManager">
-    <configuration name="go build github.com/harinugroho/notion" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Test.TestNewList_Summary in github.com/harinugroho/notion">
+    <configuration name="TestNewList in github.com/harinugroho/notion" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="notion" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/harinugroho/notion" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestNewList\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestNewList_Summary in github.com/harinugroho/notion" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="notion" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/harinugroho/notion" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestNewList_Summary\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go test notion" type="GoTestRunConfiguration" factoryName="Go Test" nameIsGenerated="true">
       <module name="notion" />
       <working_directory value="$PROJECT_DIR$" />
       <EXTENSION ID="net.ashald.envfile">
@@ -63,12 +95,19 @@
           <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
         </ENTRIES>
       </EXTENSION>
-      <kind value="PACKAGE" />
+      <kind value="DIRECTORY" />
       <package value="github.com/harinugroho/notion" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Test.TestNewList_Summary in github.com/harinugroho/notion" />
+        <item itemvalue="Go Test.TestNewList in github.com/harinugroho/notion" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">

@@ -58,3 +58,20 @@ func (o *Object) GetList() ([]map[string]Type, error) {
 		return nil, errors.New("not a list")
 	}
 }
+
+func (o *Object) GetFooter() ([]map[string]Type, error) {
+	if o.Object == "list" {
+		var data []map[string]Type
+		for _, value := range o.Results {
+			properties := value.Properties
+			datum := map[string]Type{}
+			for key, value := range properties {
+				datum[key] = value
+			}
+			data = append(data, datum)
+		}
+		return data, nil
+	} else {
+		return nil, errors.New("not a list")
+	}
+}

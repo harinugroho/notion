@@ -49,7 +49,6 @@ func (t Type) GetPlainData() string {
 	case "people":
 		return t.People.ValueOrZero().GetAllPlainText()
 	case "checkbox":
-		//boolean to string
 		return strconv.FormatBool(t.Checkbox.Checkbox)
 	case "files":
 		return t.Files.ValueOrZero().GetAllPlainText()
@@ -67,6 +66,17 @@ func (t Type) GetPlainData() string {
 		return t.PageId.String
 	default:
 		return ""
+	}
+}
+
+func (t Type) GetNumberData() float64 {
+	switch t.Type {
+	case "number":
+		return t.Number.ValueOrZero().Value
+	case "formula":
+		return t.Formula.GetNumberData()
+	default:
+		return 0
 	}
 }
 
