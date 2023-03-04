@@ -3,9 +3,9 @@ package notion
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/harinugroho/notion/item"
 	"io"
 	"net/http"
-	"notion/item"
 )
 
 type Database struct {
