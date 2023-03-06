@@ -2,21 +2,20 @@ package item
 
 import (
 	"errors"
-	"github.com/harinugroho/notion/subitem"
 	"time"
 )
 
 type Object struct {
-	Object         string               `json:"object"`
-	Id             string               `json:"id"`
-	CreatedTime    time.Time            `json:"created_time"`
-	LastEditedTime time.Time            `json:"last_edited_time"`
-	Title          subitem.NullRichText `json:"title"`
-	Results        []Object             `json:"results"`
-	Properties     map[string]Type      `json:"properties"`
-	Parent         Type                 `json:"parent"`
-	Url            string               `json:"url"`
-	Archived       bool                 `json:"archived"`
+	Object         string          `json:"object"`
+	Id             string          `json:"id"`
+	CreatedTime    time.Time       `json:"created_time"`
+	LastEditedTime time.Time       `json:"last_edited_time"`
+	Title          NullRichText    `json:"title"`
+	Results        []Object        `json:"results"`
+	Properties     map[string]Type `json:"properties"`
+	Parent         Type            `json:"parent"`
+	Url            string          `json:"url"`
+	Archived       bool            `json:"archived"`
 }
 
 func (o *Object) GetInfo() map[string]interface{} {

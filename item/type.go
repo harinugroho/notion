@@ -2,7 +2,6 @@ package item
 
 import (
 	"encoding/json"
-	"github.com/harinugroho/notion/subitem"
 	"strconv"
 )
 
@@ -11,23 +10,23 @@ type Type struct {
 	Name string `json:"name"`
 	Type string `json:"type"`
 
-	Checkbox       subitem.NullCheckbox    `json:"checkbox"`
-	PhoneNumber    subitem.NullString      `json:"phone_number"`
-	Email          subitem.NullString      `json:"email"`
-	Url            subitem.NullString      `json:"url"`
-	PageId         subitem.NullString      `json:"page_id"`
-	CreatedTime    subitem.NullString      `json:"created_time"`
-	LastEditedTime subitem.NullString      `json:"last_edited_time"`
-	Select         subitem.NullSelect      `json:"select"`
-	MultiSelect    subitem.NullMultiSelect `json:"multi_select"`
-	RichText       subitem.NullRichText    `json:"rich_text"`
-	Title          subitem.NullRichText    `json:"title"`
-	Number         subitem.NullNumber      `json:"number"`
-	Status         subitem.NullStatus      `json:"status"`
-	Date           subitem.NullDate        `json:"date"`
-	People         subitem.NullPeople      `json:"people"`
-	Files          subitem.NullFiles       `json:"files"`
-	Formula        *Type                   `json:"formula"`
+	Checkbox       NullCheckbox    `json:"checkbox"`
+	PhoneNumber    NullString      `json:"phone_number"`
+	Email          NullString      `json:"email"`
+	Url            NullString      `json:"url"`
+	PageId         NullString      `json:"page_id"`
+	CreatedTime    NullString      `json:"created_time"`
+	LastEditedTime NullString      `json:"last_edited_time"`
+	Select         NullSelect      `json:"select"`
+	MultiSelect    NullMultiSelect `json:"multi_select"`
+	RichText       NullRichText    `json:"rich_text"`
+	Title          NullRichText    `json:"title"`
+	Number         NullNumber      `json:"number"`
+	Status         NullStatus      `json:"status"`
+	Date           NullDate        `json:"date"`
+	People         NullPeople      `json:"people"`
+	Files          NullFiles       `json:"files"`
+	Formula        *Type           `json:"formula"`
 }
 
 func (t Type) GetPlainData() string {

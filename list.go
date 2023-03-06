@@ -47,14 +47,14 @@ func (list *List) GetData() []map[string]item.Type {
 	return data
 }
 
-func (list *List) GetSummary(request map[string]string) map[string]float64 {
+func (list *List) GetFooter(request map[string]string) map[string]float64 {
 	data, err := list.object.GetList()
 	if err != nil {
 		return nil
 	}
 
 	summary := map[string]float64{}
-	for key := range request {
+	for key := range data[0] {
 		summary[key] = 0
 	}
 

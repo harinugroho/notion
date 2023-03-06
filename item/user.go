@@ -1,4 +1,4 @@
-package subitem
+package item
 
 type User struct {
 	Object    string `json:"object"`

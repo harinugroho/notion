@@ -4,13 +4,24 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00ab9a27-1868-4a41-9d0d-57e100cebbfd" name="Changes" comment="change package name">
-      <change afterPath="$PROJECT_DIR$/database_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/list_test.go" afterDir="false" />
+    <list default="true" id="00ab9a27-1868-4a41-9d0d-57e100cebbfd" name="Changes" comment="add summary">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/item/object.go" beforeDir="false" afterPath="$PROJECT_DIR$/item/object.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/item/type.go" beforeDir="false" afterPath="$PROJECT_DIR$/item/type.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/list.go" beforeDir="false" afterPath="$PROJECT_DIR$/list.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/list_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/list_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subitem/checkbox.go" beforeDir="false" afterPath="$PROJECT_DIR$/item/checkbox.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subitem/date.go" beforeDir="false" afterPath="$PROJECT_DIR$/item/date.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subitem/file.go" beforeDir="false" afterPath="$PROJECT_DIR$/item/file.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subitem/multi_select.go" beforeDir="false" afterPath="$PROJECT_DIR$/item/multi_select.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subitem/number.go" beforeDir="false" afterPath="$PROJECT_DIR$/item/number.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subitem/people.go" beforeDir="false" afterPath="$PROJECT_DIR$/item/people.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subitem/richtext.go" beforeDir="false" afterPath="$PROJECT_DIR$/item/richtext.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subitem/select.go" beforeDir="false" afterPath="$PROJECT_DIR$/item/select.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subitem/status.go" beforeDir="false" afterPath="$PROJECT_DIR$/item/status.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subitem/string.go" beforeDir="false" afterPath="$PROJECT_DIR$/item/string.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subitem/text.go" beforeDir="false" afterPath="$PROJECT_DIR$/item/text.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subitem/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/item/user.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,28 +69,26 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/item" />
+    </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestNewList_Summary in github.com/harinugroho/notion">
-    <configuration name="TestNewList in github.com/harinugroho/notion" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="notion" />
       <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="github.com/harinugroho/notion" />
+      <kind value="FILE" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestNewList\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestNewList_Summary in github.com/harinugroho/notion" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
       <module name="notion" />
       <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="github.com/harinugroho/notion" />
+      <kind value="DIRECTORY" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestNewList_Summary\E$" />
       <method v="2" />
     </configuration>
     <configuration name="go test notion" type="GoTestRunConfiguration" factoryName="Go Test" nameIsGenerated="true">
@@ -102,12 +111,6 @@
       <framework value="gotest" />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Go Test.TestNewList_Summary in github.com/harinugroho/notion" />
-        <item itemvalue="Go Test.TestNewList in github.com/harinugroho/notion" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,7 +119,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add go mod" />
     <MESSAGE value="change package name" />
-    <option name="LAST_COMMIT_MESSAGE" value="change package name" />
+    <MESSAGE value="add summary" />
+    <option name="LAST_COMMIT_MESSAGE" value="add summary" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

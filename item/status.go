@@ -1,4 +1,4 @@
-package subitem
+package item
 
 import (
 	"encoding/json"

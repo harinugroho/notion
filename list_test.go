@@ -24,33 +24,9 @@ func TestNewList_Summary(t *testing.T) {
 	list := NewList(token, id)
 
 	request := map[string]string{
-		"Kolom Angka": "sum",
+		"Kolom Angka": "sum", // sum, average, max, min, count
 	}
-	summary := list.GetSummary(request)
-	for key, value := range summary {
-		fmt.Printf("%s: %f\n", key, value)
-	}
-
-	request = map[string]string{
-		"Kolom Angka": "count",
-	}
-	summary = list.GetSummary(request)
-	for key, value := range summary {
-		fmt.Printf("%s: %f\n", key, value)
-	}
-
-	request = map[string]string{
-		"Kolom Angka": "max",
-	}
-	summary = list.GetSummary(request)
-	for key, value := range summary {
-		fmt.Printf("%s: %f\n", key, value)
-	}
-
-	request = map[string]string{
-		"Kolom Angka": "min",
-	}
-	summary = list.GetSummary(request)
+	summary := list.GetFooter(request)
 	for key, value := range summary {
 		fmt.Printf("%s: %f\n", key, value)
 	}
