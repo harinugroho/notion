@@ -4,24 +4,44 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00ab9a27-1868-4a41-9d0d-57e100cebbfd" name="Changes" comment="add summary">
+    <list default="true" id="00ab9a27-1868-4a41-9d0d-57e100cebbfd" name="Changes" comment="change project structure">
+      <change afterPath="$PROJECT_DIR$/notion.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/properties/base_filter.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/properties/base_object.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/properties/base_type.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/properties/type_bool.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/properties/type_date.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/properties/type_external.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/properties/type_file.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/properties/type_float.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/properties/type_formula.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/properties/type_multiselect.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/properties/type_object.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/properties/type_relation.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/properties/type_select.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/properties/type_string.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/properties/type_text.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/properties/type_time.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/properties/type_type.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/object.go" beforeDir="false" afterPath="$PROJECT_DIR$/item/object.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/type.go" beforeDir="false" afterPath="$PROJECT_DIR$/item/type.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/list.go" beforeDir="false" afterPath="$PROJECT_DIR$/list.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/list_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/list_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subitem/checkbox.go" beforeDir="false" afterPath="$PROJECT_DIR$/item/checkbox.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subitem/date.go" beforeDir="false" afterPath="$PROJECT_DIR$/item/date.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subitem/file.go" beforeDir="false" afterPath="$PROJECT_DIR$/item/file.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subitem/multi_select.go" beforeDir="false" afterPath="$PROJECT_DIR$/item/multi_select.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subitem/number.go" beforeDir="false" afterPath="$PROJECT_DIR$/item/number.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subitem/people.go" beforeDir="false" afterPath="$PROJECT_DIR$/item/people.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subitem/richtext.go" beforeDir="false" afterPath="$PROJECT_DIR$/item/richtext.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subitem/select.go" beforeDir="false" afterPath="$PROJECT_DIR$/item/select.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subitem/status.go" beforeDir="false" afterPath="$PROJECT_DIR$/item/status.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subitem/string.go" beforeDir="false" afterPath="$PROJECT_DIR$/item/string.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subitem/text.go" beforeDir="false" afterPath="$PROJECT_DIR$/item/text.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subitem/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/item/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/item/checkbox.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/item/date.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/item/file.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/item/multi_select.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/item/number.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/item/object.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/item/people.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/item/richtext.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/item/select.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/item/status.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/item/string.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/item/text.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/item/type.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/item/user.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/list.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/list_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/notion_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,8 +51,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Go File" />
         <option value="Go Application" />
+        <option value="Go File" />
       </list>
     </option>
   </component>
@@ -51,7 +71,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;DefaultGoTemplateProperty&quot;: &quot;Go Application&quot;,
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
@@ -60,35 +80,41 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
     &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/harinugroho/Documents/WebProject/notion&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/harinugroho/Documents/WebProject/notion/properties&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/properties" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/item" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+  <component name="RunManager" selected="Go Test.go test notion">
+    <configuration name="TestClient_Database in github.com/harinugroho/notion" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="notion" />
       <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
-      <module name="notion" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="DIRECTORY" />
+      <kind value="PACKAGE" />
+      <package value="github.com/harinugroho/notion" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
+      <pattern value="^\QTestClient_Database\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestClient_List in github.com/harinugroho/notion" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="notion" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/harinugroho/notion" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestClient_List\E$" />
       <method v="2" />
     </configuration>
     <configuration name="go test notion" type="GoTestRunConfiguration" factoryName="Go Test" nameIsGenerated="true">
@@ -111,6 +137,12 @@
       <framework value="gotest" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Test.TestClient_List in github.com/harinugroho/notion" />
+        <item itemvalue="Go Test.TestClient_Database in github.com/harinugroho/notion" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,7 +152,8 @@
     <MESSAGE value="add go mod" />
     <MESSAGE value="change package name" />
     <MESSAGE value="add summary" />
-    <option name="LAST_COMMIT_MESSAGE" value="add summary" />
+    <MESSAGE value="change project structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="change project structure" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
