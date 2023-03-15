@@ -70,13 +70,13 @@ func (t *Type) Value() interface{} {
 	case "title":
 		return t.Title.Value("")
 	case "files":
-		return t.Files.Value(", ")
+		return t.Files.ArrayValue()
 	case "rich_text":
 		return t.RichText.Value("")
 	case "array":
-		return t.Array.Value(", ")
+		return t.Array.ArrayValue()
 	case "people":
-		return t.People.Value(", ")
+		return t.People.ArrayValue()
 	case "email":
 		return t.Email.Value()
 	case "phone_number":
@@ -112,8 +112,5 @@ func (t *Type) Value() interface{} {
 }
 
 func (t Type) MarshalJSON() ([]byte, error) {
-	if t.Value() == nil {
-		return []byte("null"), nil
-	}
 	return json.Marshal(t.Value())
 }

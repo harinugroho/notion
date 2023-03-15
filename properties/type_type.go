@@ -26,6 +26,18 @@ func joinValueType(types []Type, separator string) string {
 	return value
 }
 
+func (m *MapType) ArrayValue() []string {
+	return joinArrayValueType(m.PageProperty)
+}
+
+func joinArrayValueType(types []Type) []string {
+	var values []string
+	for _, v := range types {
+		values = append(values, fmt.Sprintf("%v", v.Value()))
+	}
+	return values
+}
+
 func (m *MapType) UnmarshalJSON(data []byte) error {
 	var err error
 	var v interface{}

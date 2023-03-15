@@ -5,43 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00ab9a27-1868-4a41-9d0d-57e100cebbfd" name="Changes" comment="change project structure">
-      <change afterPath="$PROJECT_DIR$/notion.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/properties/base_filter.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/properties/base_object.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/properties/base_type.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/properties/type_bool.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/properties/type_date.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/properties/type_external.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/properties/type_file.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/properties/type_float.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/properties/type_formula.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/properties/type_multiselect.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/properties/type_object.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/properties/type_relation.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/properties/type_select.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/properties/type_string.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/properties/type_text.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/properties/type_time.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/properties/type_type.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database_test.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/checkbox.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/date.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/file.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/multi_select.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/number.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/object.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/people.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/richtext.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/select.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/status.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/string.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/text.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/type.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/user.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/list.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/list_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/notion_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notion_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/notion_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/properties/base_type.go" beforeDir="false" afterPath="$PROJECT_DIR$/properties/base_type.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/properties/type_type.go" beforeDir="false" afterPath="$PROJECT_DIR$/properties/type_type.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

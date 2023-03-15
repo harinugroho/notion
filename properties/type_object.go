@@ -26,6 +26,18 @@ func joinValueObject(types []Object, separator string) string {
 	return value
 }
 
+func (m *MapObject) ArrayValue() []string {
+	return joinArrayValueObject(m.PageProperty)
+}
+
+func joinArrayValueObject(objects []Object) []string {
+	var values []string
+	for _, v := range objects {
+		values = append(values, fmt.Sprintf("%v", v.Id))
+	}
+	return values
+}
+
 func (m *MapObject) UnmarshalJSON(data []byte) error {
 	var err error
 	var v interface{}
