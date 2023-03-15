@@ -2,7 +2,6 @@ package properties
 
 import (
 	"encoding/json"
-	"fmt"
 	"time"
 )
 
@@ -39,8 +38,8 @@ type Object struct {
 func (o *Object) MapInfo() map[string]interface{} {
 	return map[string]interface{}{
 		"id":               o.Id,
-		"cover":            fmt.Sprintf("%v", o.Cover.Value()),
-		"icon":             fmt.Sprintf("%v", o.Icon.Value()),
+		"cover":            o.Cover.Value(),
+		"icon":             o.Icon.Value(),
 		"created_time":     o.CreatedTime.String(),
 		"created_by":       o.CreatedBy.Id,
 		"last_edited_by":   o.LastEditedBy.Id,
@@ -75,5 +74,16 @@ func (o *Object) MapResults() []map[string]interface{} {
 }
 
 func (o Object) MarshalJSON() ([]byte, error) {
+	switch o.Object {
+	case "database":
+		return json.Marshal(map[string]interface{}{
+			"info":       o.MapInfo(),
+			"properties": o.MapProperties(),
+		})
+	case "list":
+		return json.Marshal(o.Results)
+	case "page":
+		return json.Marshal(o.Properties)
+	}
 	return json.Marshal(o)
 }

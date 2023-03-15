@@ -14,14 +14,14 @@ type Client struct {
 	integrationToken string
 	databaseId       string
 
-	sorts    []map[string]string
-	filters  map[string][]map[string]interface{}
-	database properties.Object
+	sorts   []map[string]string
+	filters map[string][]map[string]interface{}
+	object  properties.Object
 }
 
 func (c *Client) GetDatabase() (Client, error) {
 	if c.databaseId == "" {
-		panic("database id is empty")
+		panic("object id is empty")
 	}
 
 	url := fmt.Sprintf("https://api.notion.com/v1/databases/%s", c.databaseId)
@@ -42,7 +42,7 @@ func (c *Client) GetDatabase() (Client, error) {
 		}
 	}(resp.Body)
 
-	err = json.NewDecoder(resp.Body).Decode(&c.database)
+	err = json.NewDecoder(resp.Body).Decode(&c.object)
 	if err != nil {
 		return *c, err
 	}
@@ -50,11 +50,11 @@ func (c *Client) GetDatabase() (Client, error) {
 }
 
 func (c *Client) GetInfo() map[string]interface{} {
-	return c.database.MapInfo()
+	return c.object.MapInfo()
 }
 
 func (c *Client) GetProperties() map[string]string {
-	return c.database.MapProperties()
+	return c.object.MapProperties()
 }
 
 func convertSorts(sorts map[string]string) []map[string]string {
@@ -96,7 +96,7 @@ func (c *Client) Filters(filters properties.Filter) *Client {
 
 func (c *Client) GetList() (Client, error) {
 	if c.databaseId == "" {
-		panic("database id is empty")
+		panic("object id is empty")
 	}
 
 	url := fmt.Sprintf("https://api.notion.com/v1/databases/%s/query", c.databaseId)
@@ -129,7 +129,7 @@ func (c *Client) GetList() (Client, error) {
 		}
 	}(resp.Body)
 
-	err = json.NewDecoder(resp.Body).Decode(&c.database)
+	err = json.NewDecoder(resp.Body).Decode(&c.object)
 	if err != nil {
 		return *c, err
 	}
@@ -137,16 +137,28 @@ func (c *Client) GetList() (Client, error) {
 }
 
 func (c *Client) GetResults() []map[string]interface{} {
-	return c.database.MapResults()
+	return c.object.MapResults()
 }
 
-func NewClient(integrationToken string, databaseUrl string) *Client {
+func (c *Client) GetObject() properties.Object {
+	return c.object
+}
+
+func (c *Client) SetDatabaseId(databaseId string) *Client {
+	c.databaseId = databaseId
+	return c
+}
+
+func (c *Client) SetDatabaseIdByUrl(databaseUrl string) *Client {
 	re := regexp.MustCompile(`/[A-Za-z0-9]+\?v`)
 	match := re.FindStringSubmatch(databaseUrl)[0]
 	databaseId := match[1 : len(match)-2]
+	c.databaseId = databaseId
+	return c
+}
 
+func NewClient(integrationToken string) *Client {
 	return &Client{
 		integrationToken: integrationToken,
-		databaseId:       databaseId,
 	}
 }

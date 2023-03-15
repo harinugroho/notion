@@ -58,5 +58,9 @@ func (m *MapType) UnmarshalJSON(data []byte) error {
 }
 
 func (m MapType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(m.Value(" "))
+	value := m.ArrayValue()
+	if len(value) == 0 {
+		return json.Marshal([]string{})
+	}
+	return json.Marshal(m.ArrayValue())
 }

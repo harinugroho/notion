@@ -105,12 +105,66 @@ func (t *Type) Value() interface{} {
 		return t.Rollup.Value()
 	case "relation":
 		return t.Relation.Value()
-
 	default:
 		return nil
 	}
 }
 
 func (t Type) MarshalJSON() ([]byte, error) {
-	return json.Marshal(t.Value())
+	switch t.Type {
+	case "emoji":
+		return json.Marshal(t.Emoji)
+	case "external":
+		return json.Marshal(t.External)
+	case "file":
+		return json.Marshal(t.File)
+	case "formula":
+		return json.Marshal(t.Formula)
+	case "text":
+		return json.Marshal(t.PlainText)
+	case "page_id":
+		return json.Marshal(t.PageId)
+	case "checkbox":
+		return json.Marshal(t.Checkbox)
+	case "title":
+		return json.Marshal(t.Title)
+	case "files":
+		return json.Marshal(t.Files)
+	case "rich_text":
+		return json.Marshal(t.RichText)
+	case "array":
+		return json.Marshal(t.Array)
+	case "people":
+		return json.Marshal(t.People)
+	case "email":
+		return json.Marshal(t.Email)
+	case "phone_number":
+		return json.Marshal(t.PhoneNumber)
+	case "url":
+		return json.Marshal(t.Url)
+	case "number":
+		return json.Marshal(t.Number)
+	case "created_time":
+		return json.Marshal(t.CreatedTime)
+	case "last_edited_time":
+		return json.Marshal(t.LastEditedTime)
+	case "created_by":
+		return json.Marshal(t.CreatedBy.Id)
+	case "last_edited_by":
+		return json.Marshal(t.LastEditedBy.Id)
+	case "date":
+		return json.Marshal(t.Date)
+	case "select":
+		return json.Marshal(t.Select)
+	case "status":
+		return json.Marshal(t.Status)
+	case "multi_select":
+		return json.Marshal(t.MultiSelect)
+	case "rollup":
+		return json.Marshal(t.Rollup)
+	case "relation":
+		return json.Marshal(t.Relation)
+	default:
+		return []byte("null"), nil
+	}
 }

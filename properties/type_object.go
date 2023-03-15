@@ -58,5 +58,5 @@ func (m *MapObject) UnmarshalJSON(data []byte) error {
 }
 
 func (m MapObject) MarshalJSON() ([]byte, error) {
-	return json.Marshal(m.Value(" "))
+	return json.Marshal(m.ArrayValue())
 }
