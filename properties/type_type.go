@@ -15,6 +15,13 @@ func (m *MapType) Value(separator string) string {
 	return joinValueType(m.PageProperty, separator)
 }
 
+func (m *MapType) ValueOrNull(separator string) interface{} {
+	if len(m.PageProperty) == 0 {
+		return nil
+	}
+	return joinValueType(m.PageProperty, separator)
+}
+
 func joinValueType(types []Type, separator string) string {
 	var value string
 	for i, t := range types {

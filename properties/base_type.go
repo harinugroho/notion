@@ -127,11 +127,11 @@ func (t Type) MarshalJSON() ([]byte, error) {
 	case "checkbox":
 		return json.Marshal(t.Checkbox)
 	case "title":
-		return json.Marshal(t.Title)
+		return json.Marshal(t.Title.ValueOrNull(""))
 	case "files":
 		return json.Marshal(t.Files)
 	case "rich_text":
-		return json.Marshal(t.RichText)
+		return json.Marshal(t.RichText.ValueOrNull(""))
 	case "array":
 		return json.Marshal(t.Array)
 	case "people":
