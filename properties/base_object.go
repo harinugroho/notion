@@ -84,6 +84,12 @@ func (o Object) MarshalJSON() ([]byte, error) {
 		return json.Marshal(o.Results)
 	case "page":
 		return json.Marshal(o.Properties)
+	case "error":
+		return json.Marshal(map[string]interface{}{
+			"status":  o.Status,
+			"code":    o.Code,
+			"message": o.Message,
+		})
 	}
 	return json.Marshal(o)
 }
