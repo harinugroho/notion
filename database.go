@@ -44,3 +44,32 @@ func (c *Client) GetInfo() map[string]interface{} {
 func (c *Client) GetProperties() map[string]string {
 	return c.object.MapProperties()
 }
+
+func (c *Client) GetFooter(footers map[string]string) map[string]float64 {
+	count := make(map[string]float64)
+	result := make(map[string]float64)
+	for key := range footers {
+		count[key] = 0
+		result[key] = 0
+	}
+
+	for _, value := range c.object.MapResults() {
+		for key, action := range footers {
+			count[key] += 1
+			if action == "sum" {
+				result[key] += value[key].(float64)
+			} else if action == "count" {
+				result[key] += 1
+			} else if action == "avg" {
+				result[key] += value[key].(float64)
+			}
+		}
+	}
+
+	for key, action := range footers {
+		if action == "avg" {
+			result[key] = result[key] / count[key]
+		}
+	}
+	return result
+}

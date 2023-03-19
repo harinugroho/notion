@@ -1,13 +1,13 @@
 package properties
 
 type Filter struct {
-	Logic string
-	Items []FilterItem
+	Logic string       `json:"logic"`
+	Items []FilterItem `json:"items"`
 }
 
 type FilterItem struct {
-	Property string
-	Type     string
-	Logic    string
-	Value    interface{}
+	Property string      `json:"property"`
+	Type     string      `json:"type"`
+	Logic    string      `json:"logic"`
+	Value    interface{} `json:"value"`
 }
