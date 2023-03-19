@@ -7,55 +7,7 @@ import (
 	"github.com/harinugroho/notion/properties"
 	"io"
 	"net/http"
-	"regexp"
 )
-
-type Client struct {
-	integrationToken string
-	databaseId       string
-
-	sorts   []map[string]string
-	filters map[string][]map[string]interface{}
-	object  properties.Object
-}
-
-func (c *Client) GetDatabase() (Client, error) {
-	if c.databaseId == "" {
-		panic("object id is empty")
-	}
-
-	url := fmt.Sprintf("https://api.notion.com/v1/databases/%s", c.databaseId)
-	bearer := fmt.Sprintf("Bearer %s", c.integrationToken)
-	req, err := http.NewRequest("GET", url, nil)
-	req.Header.Add("Authorization", bearer)
-	req.Header.Add("Notion-Version", "2022-02-22")
-
-	client := &http.Client{}
-	resp, err := client.Do(req)
-	if err != nil {
-		return *c, err
-	}
-	defer func(Body io.ReadCloser) {
-		err := Body.Close()
-		if err != nil {
-			fmt.Printf("error closing body: %s", err)
-		}
-	}(resp.Body)
-
-	err = json.NewDecoder(resp.Body).Decode(&c.object)
-	if err != nil {
-		return *c, err
-	}
-	return *c, nil
-}
-
-func (c *Client) GetInfo() map[string]interface{} {
-	return c.object.MapInfo()
-}
-
-func (c *Client) GetProperties() map[string]string {
-	return c.object.MapProperties()
-}
 
 func convertSorts(sorts map[string]string) []map[string]string {
 	var sortsConverted []map[string]string
@@ -138,27 +90,4 @@ func (c *Client) GetList() (Client, error) {
 
 func (c *Client) GetResults() []map[string]interface{} {
 	return c.object.MapResults()
-}
-
-func (c *Client) GetObject() properties.Object {
-	return c.object
-}
-
-func (c *Client) SetDatabaseId(databaseId string) *Client {
-	c.databaseId = databaseId
-	return c
-}
-
-func (c *Client) SetDatabaseIdByUrl(databaseUrl string) *Client {
-	re := regexp.MustCompile(`/[A-Za-z0-9]+\?v`)
-	match := re.FindStringSubmatch(databaseUrl)[0]
-	databaseId := match[1 : len(match)-2]
-	c.databaseId = databaseId
-	return c
-}
-
-func NewClient(integrationToken string) *Client {
-	return &Client{
-		integrationToken: integrationToken,
-	}
 }
