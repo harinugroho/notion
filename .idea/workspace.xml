@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00ab9a27-1868-4a41-9d0d-57e100cebbfd" name="Changes" comment="add footer feature">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.go" beforeDir="false" afterPath="$PROJECT_DIR$/database.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/database_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/base_object.go" beforeDir="false" afterPath="$PROJECT_DIR$/properties/base_object.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/type_date.go" beforeDir="false" afterPath="$PROJECT_DIR$/properties/type_date.go" afterDir="false" />
-    </list>
+    <list default="true" id="00ab9a27-1868-4a41-9d0d-57e100cebbfd" name="Changes" comment="add graph feature" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -158,7 +152,8 @@
     <MESSAGE value="set reach text default value to null" />
     <MESSAGE value="split function to 3 file" />
     <MESSAGE value="add footer feature" />
-    <option name="LAST_COMMIT_MESSAGE" value="add footer feature" />
+    <MESSAGE value="add graph feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="add graph feature" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
