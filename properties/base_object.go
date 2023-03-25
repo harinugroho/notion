@@ -59,7 +59,7 @@ func (o *Object) MapProperties() map[string]string {
 		for key, value := range o.Properties {
 			properties[key] = value.Type
 		}
-	} else {
+	} else if o.Object == "list" {
 		for key, value := range o.Results[0].Properties {
 			properties[key] = value.Type
 		}

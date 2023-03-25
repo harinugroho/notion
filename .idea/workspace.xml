@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00ab9a27-1868-4a41-9d0d-57e100cebbfd" name="Changes" comment="add graph feature" />
+    <list default="true" id="00ab9a27-1868-4a41-9d0d-57e100cebbfd" name="Changes" comment="fix issue on maping">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,40 +60,7 @@
       <recent name="$PROJECT_DIR$/item" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestList_Graph in github.com/harinugroho/notion">
-    <configuration name="TestClient_Database in github.com/harinugroho/notion" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="notion" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="github.com/harinugroho/notion" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestClient_Database\E$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestList_Footer in github.com/harinugroho/notion" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="notion" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="github.com/harinugroho/notion" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestList_Footer\E$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestList_Graph in github.com/harinugroho/notion" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="notion" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="github.com/harinugroho/notion" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestList_Graph\E$" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager">
     <configuration name="go test notion" type="GoTestRunConfiguration" factoryName="Go Test" nameIsGenerated="true">
       <module name="notion" />
       <working_directory value="$PROJECT_DIR$" />
@@ -112,19 +81,6 @@
       <framework value="gotest" />
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="Go Test.go test notion" />
-      <item itemvalue="Go Test.TestClient_Database in github.com/harinugroho/notion" />
-      <item itemvalue="Go Test.TestList_Graph in github.com/harinugroho/notion" />
-      <item itemvalue="Go Test.TestList_Footer in github.com/harinugroho/notion" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Go Test.TestList_Graph in github.com/harinugroho/notion" />
-        <item itemvalue="Go Test.TestClient_Database in github.com/harinugroho/notion" />
-        <item itemvalue="Go Test.TestList_Footer in github.com/harinugroho/notion" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,7 +109,8 @@
     <MESSAGE value="split function to 3 file" />
     <MESSAGE value="add footer feature" />
     <MESSAGE value="add graph feature" />
-    <option name="LAST_COMMIT_MESSAGE" value="add graph feature" />
+    <MESSAGE value="fix issue on maping" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix issue on maping" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
