@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"strings"
+	"time"
 )
 
 func (c *Client) GetDatabase() (Client, error) {
@@ -70,6 +72,34 @@ func (c *Client) GetFooter(footers map[string]string) map[string]float64 {
 		if action == "avg" {
 			result[key] = result[key] / count[key]
 		}
+	}
+	return result
+}
+
+func (c *Client) GetGraph(xKey string, yKey string, dateGroup string) map[string]float64 {
+	result := make(map[string]float64, 0)
+	properties := c.object.MapProperties()
+	for _, value := range c.object.MapResults() {
+		x := value[xKey].(string)
+		y := value[yKey].(float64)
+
+		if properties[xKey] == "date" {
+			startDateString := strings.Split(value[xKey].(string), " - ")[0]
+			startDateDate, err := time.Parse(time.RFC3339, startDateString)
+			if err != nil {
+				panic(err)
+			}
+
+			if dateGroup == "month" {
+				x = startDateDate.Format("2006-01")
+			} else if dateGroup == "year" {
+				x = startDateDate.Format("2006")
+			} else {
+				x = startDateDate.Format("2006-01-02")
+			}
+		}
+
+		result[x] += y
 	}
 	return result
 }

@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00ab9a27-1868-4a41-9d0d-57e100cebbfd" name="Changes" comment="split function to 3 file">
-      <change afterPath="$PROJECT_DIR$/list_test.go" afterDir="false" />
+    <list default="true" id="00ab9a27-1868-4a41-9d0d-57e100cebbfd" name="Changes" comment="add footer feature">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/database_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/list.go" beforeDir="false" afterPath="$PROJECT_DIR$/list.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/base_filter.go" beforeDir="false" afterPath="$PROJECT_DIR$/properties/base_filter.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.go" beforeDir="false" afterPath="$PROJECT_DIR$/database.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/database_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/properties/base_object.go" beforeDir="false" afterPath="$PROJECT_DIR$/properties/base_object.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/properties/type_date.go" beforeDir="false" afterPath="$PROJECT_DIR$/properties/type_date.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,24 +37,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultGoTemplateProperty": "Go File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "/Users/harinugroho/Documents/WebProject/notion/properties",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "vcs.Git"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/harinugroho/Documents/WebProject/notion/properties&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/properties" />
@@ -64,7 +64,18 @@
       <recent name="$PROJECT_DIR$/item" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestList_Footer in github.com/harinugroho/notion">
+  <component name="RunManager" selected="Go Test.TestList_Graph in github.com/harinugroho/notion">
+    <configuration name="TestClient_Database in github.com/harinugroho/notion" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="notion" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/harinugroho/notion" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestClient_Database\E$" />
+      <method v="2" />
+    </configuration>
     <configuration name="TestList_Footer in github.com/harinugroho/notion" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="notion" />
       <working_directory value="$PROJECT_DIR$" />
@@ -74,6 +85,17 @@
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
       <pattern value="^\QTestList_Footer\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestList_Graph in github.com/harinugroho/notion" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="notion" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/harinugroho/notion" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestList_Graph\E$" />
       <method v="2" />
     </configuration>
     <configuration name="go test notion" type="GoTestRunConfiguration" factoryName="Go Test" nameIsGenerated="true">
@@ -98,10 +120,14 @@
     </configuration>
     <list>
       <item itemvalue="Go Test.go test notion" />
+      <item itemvalue="Go Test.TestClient_Database in github.com/harinugroho/notion" />
+      <item itemvalue="Go Test.TestList_Graph in github.com/harinugroho/notion" />
       <item itemvalue="Go Test.TestList_Footer in github.com/harinugroho/notion" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestList_Graph in github.com/harinugroho/notion" />
+        <item itemvalue="Go Test.TestClient_Database in github.com/harinugroho/notion" />
         <item itemvalue="Go Test.TestList_Footer in github.com/harinugroho/notion" />
       </list>
     </recent_temporary>
@@ -131,7 +157,8 @@
     <MESSAGE value="add handler on error" />
     <MESSAGE value="set reach text default value to null" />
     <MESSAGE value="split function to 3 file" />
-    <option name="LAST_COMMIT_MESSAGE" value="split function to 3 file" />
+    <MESSAGE value="add footer feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="add footer feature" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

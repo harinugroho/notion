@@ -20,7 +20,7 @@ type MapDate struct {
 }
 
 func (m *MapDate) Value() string {
-	return m.PageProperty.Start.String() + " - " + m.PageProperty.End.String()
+	return m.PageProperty.Start.Format(time.RFC3339) + " - " + m.PageProperty.End.Format(time.RFC3339)
 }
 
 func (m *MapDate) UnmarshalJSON(data []byte) error {

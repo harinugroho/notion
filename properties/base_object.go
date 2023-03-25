@@ -55,8 +55,14 @@ func (o *Object) MapInfo() map[string]interface{} {
 
 func (o *Object) MapProperties() map[string]string {
 	properties := map[string]string{}
-	for key, value := range o.Properties {
-		properties[key] = value.Type
+	if o.Type == "database" {
+		for key, value := range o.Properties {
+			properties[key] = value.Type
+		}
+	} else {
+		for key, value := range o.Results[0].Properties {
+			properties[key] = value.Type
+		}
 	}
 	return properties
 }

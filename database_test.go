@@ -69,3 +69,21 @@ func TestList_Footer(t *testing.T) {
 	}
 	fmt.Println("====================================")
 }
+
+func TestList_Graph(t *testing.T) {
+	client, err := NewClient(
+		"secret_YoQ2x14O0UvVb0iXoK2DiAg3vIMA25oyquO70441n4w",
+	).SetDatabaseIdByUrl(
+		"https://www.notion.so/indieapps/bc780c449ce74079b2a6c44425241aa4?v=c13d78b65c8a4cde8d25c660bae94ebf&pvs=4",
+	).GetList()
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Println("============   Graph    ============")
+	results := client.GetGraph("Date", "Kolom Number", "month")
+	for key, result := range results {
+		fmt.Printf("%s:%v\n", key, result)
+	}
+	fmt.Println("====================================")
+}
