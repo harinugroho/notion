@@ -33,7 +33,25 @@ func (m *MapDate) UnmarshalJSON(data []byte) error {
 	case Date:
 		m.PageProperty = x
 	case map[string]interface{}:
-		err = json.Unmarshal(data, &m.PageProperty)
+		if x["start"] != nil {
+			m.PageProperty.Start, err = time.Parse(time.RFC3339, x["start"].(string))
+			if err != nil {
+				m.PageProperty.Start, err = time.Parse("2006-01-02", x["start"].(string))
+				if err != nil {
+					return err
+				}
+			}
+		}
+		if x["end"] != nil {
+			m.PageProperty.End, err = time.Parse(time.RFC3339, x["end"].(string))
+			if err != nil {
+				m.PageProperty.End, err = time.Parse("2006-01-02", x["end"].(string))
+				if err != nil {
+					return err
+				}
+			}
+		}
+		m.PageProperty.TimeZone = x["time_zone"]
 	case nil:
 		m.IsNull = true
 	default:

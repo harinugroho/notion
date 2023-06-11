@@ -59,7 +59,9 @@ func (c *Client) GetFooter(footers map[string]string) map[string]float64 {
 		for key, action := range footers {
 			count[key] += 1
 			if action == "sum" {
-				result[key] += value[key].(float64)
+				if value[key] != nil {
+					result[key] += value[key].(float64)
+				}
 			} else if action == "count" {
 				result[key] += 1
 			} else if action == "avg" {
