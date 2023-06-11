@@ -34,7 +34,13 @@ func (m *MapRelation) UnmarshalJSON(data []byte) error {
 		m.PageProperty = x
 	case []interface{}:
 		err = json.Unmarshal(data, &m.PageProperty)
+	case map[string]interface{}:
+		m.DatabaseProperty = make(map[string]string)
+		for key, value := range x {
+			m.DatabaseProperty[key] = value.(string)
+		}
 	default:
+		fmt.Println(string(data))
 		err = fmt.Errorf("json: cannot unmarshal %v into Go value of type MapRelation", reflect.TypeOf(v).Name())
 	}
 	return err
